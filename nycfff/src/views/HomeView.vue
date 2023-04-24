@@ -4,8 +4,18 @@
   </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+import { ref, onMounted } from "vue";
+const test = ref("");
+async function getCause() {
+  let res = await fetch(
+    "https://data.cityofnewyork.us/resource/jb7j-dtam.json"
+  );
+  test.value = res;
+}
+onMounted(() => {
+  getCause();
+});
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
