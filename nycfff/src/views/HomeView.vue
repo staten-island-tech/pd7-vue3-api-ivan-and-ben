@@ -11,7 +11,9 @@ async function getCause() {
   let res = await fetch(
     "https://data.cityofnewyork.us/resource/jb7j-dtam.json"
   );
-  test.value = res;
+  let data = await res.json();
+  test.value = data;
+  console.log(test.value);
 }
 onMounted(() => {
   getCause();
