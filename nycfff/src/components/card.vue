@@ -5,10 +5,9 @@
 </template>
 
 <script setup>
-const props = {
+const props = defineProps({
   baby: Object,
-  id: Number,
-}
+})
 </script>
  
 <style scoped>

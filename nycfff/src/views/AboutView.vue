@@ -1,7 +1,8 @@
 <template>
-  <div>
-   
-  </div>
+<div class="container">
+  <card v-for="name in babyNames"
+  :baby="name"/>
+</div>
 </template>
 
 <script setup>
