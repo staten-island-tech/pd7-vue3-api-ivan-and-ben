@@ -1,5 +1,5 @@
 <template>
-<div class="container">
+<div id="list">
   <card v-for="name in babyNames"
   :baby="name"/>
 </div>
@@ -19,6 +19,23 @@ onMounted(()=>{
 })
 </script>
 
-<style lang="scss" scoped>
+<style>
 
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.item {
+  margin-top: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 2rem;
+  background-color: var(--light-blue);
+  border: 0.5rem solid var(--purple);
+  border-radius: 3rem;
+  font-size: var(--h3);
+}
 </style>

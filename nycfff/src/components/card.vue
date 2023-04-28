@@ -1,5 +1,5 @@
 <template>
-    <div class="card">
+    <div class="item">
       <h2>{{ baby.nm }}</h2>
     </div>
 </template>
