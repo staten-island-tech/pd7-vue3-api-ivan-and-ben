@@ -15,7 +15,6 @@ import { RouterLink, RouterView } from "vue-router";
   <RouterView />
 </template>
 
-<<<<<<< HEAD
 <style>
 html,
 body,
@@ -51,6 +50,3 @@ nav{
   text-align: center;
 }
 </style>
-=======
-<style scoped></style>
->>>>>>> main
