@@ -1,11 +1,13 @@
 <template>
-  <div>
-    <h1>preevyet</h1>
+  <h1>Hello</h1>
+  <div class="container">
+    <NYCdataprop v-for="cause in test" :cause="cause" />
   </div>
 </template>
 
 <script setup>
 import { ref, onMounted } from "vue";
+import NYCdataprop from "../components/NYCdataprop.vue";
 const test = ref("");
 async function getCause() {
   let res = await fetch(
