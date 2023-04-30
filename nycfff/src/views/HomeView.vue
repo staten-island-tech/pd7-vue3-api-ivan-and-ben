@@ -15,7 +15,7 @@ async function getCause() {
   );
   let data = await res.json();
   test.value = data;
-  console.log(test.value);
+  console.log(test.value); 
 }
 onMounted(() => {
   getCause();
