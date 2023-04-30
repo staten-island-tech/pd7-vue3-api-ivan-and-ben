@@ -1,13 +1,11 @@
 <template>
-<div id="list">
-  <card v-for="name in babyNames"
-  :baby="name"/>
-</div>
+  <PieChart />
 </template>
 
 <script setup>
 import {ref, onMounted} from 'vue'
 import card from '../components/card.vue';
+import PieChart from '../components/icons/PieChart.vue';
 const babyNames = ref("")
 async function getBabies(){
   let res = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
