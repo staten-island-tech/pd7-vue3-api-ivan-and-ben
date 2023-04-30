@@ -1,4 +1,4 @@
-<script setup>
+<script >
 import { RouterLink, RouterView } from "vue-router";
 </script>
 
@@ -11,6 +11,7 @@ import { RouterLink, RouterView } from "vue-router";
       </nav>
     </div>
   </header>
+  <BarChart />
 
   <RouterView />
 </template>
