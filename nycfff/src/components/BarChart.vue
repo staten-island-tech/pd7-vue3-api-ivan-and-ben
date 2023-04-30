@@ -12,6 +12,18 @@ import { Chart as ChartJS, Title, Tooltip, Legend, BarElement, CategoryScale, Li
 
 ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
+async function getCause() {
+  let res = await fetch(
+    "https://data.cityofnewyork.us/resource/jb7j-dtam.json"
+  );
+  let data = await res.json();
+  test.value = data;
+  let filter = data.filter((yes)=> yes.sex === "Male");
+  let thing = filter
+  console.log(thing)
+  console.log(test.value); 
+}
+
 export default {
   name: 'BarChart',
   components: { Bar },
