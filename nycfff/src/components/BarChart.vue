@@ -1,5 +1,7 @@
 <template>
-  <Bar id="my-chart-id" :options="chartOptions" :data="chartData" />
+  <div class="container">
+    <Bar v-if="loaded" :data="chartData" />
+  </div>
 </template>
 
 <script>
@@ -26,16 +28,18 @@ ChartJS.register(
 export default {
   name: "BarChart",
   components: { Bar },
-  data() {
-    return {
-      chartData: {
-        labels: ["January", "February", "March"],
-        datasets: [{ data: [40, 20, 12] }],
-      },
-      chartOptions: {
-        responsive: true,
-      },
-    };
+  props: {
+    chartData: {
+      type: Object,
+      default: null,
+    },
+    options: {
+      type: Object,
+      default: null,
+    },
+  },
+  mounted() {
+    this.renderchart(this.chartData, this.options);
   },
 };
 </script>
