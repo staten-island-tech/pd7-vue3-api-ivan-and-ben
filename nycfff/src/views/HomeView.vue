@@ -9,7 +9,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import NYCdataprop from "../components/NYCdataprop.vue";
-import BarChart from  "../components/BarChart.vue";
+import BarChart from "../components/BarChart.vue";
 const test = ref("");
 async function getCause() {
   let res = await fetch(
@@ -17,7 +17,7 @@ async function getCause() {
   );
   let data = await res.json();
   test.value = data;
-  console.log(test.value); 
+  console.log(test.value);
 }
 onMounted(() => {
   getCause();
