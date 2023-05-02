@@ -5,13 +5,14 @@ import { RouterLink, RouterView } from "vue-router";
 <template>
   <header>
     <div class="wrapper">
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
+      <h1>NYC Funny Fun Facts</h1>
+      <p id="description">Welcome to New York City Funny Fun Facts! Click on the bar below to switch datasets. </p>
+      <nav>       
+          <div id="router"><RouterLink to="/">Air Quality</RouterLink></div>
+          <div id="router"><RouterLink to="/about">Baby Names</RouterLink></div>
       </nav>
     </div>
   </header>
-  <BarChart />
 
   <RouterView />
 </template>
@@ -46,8 +47,26 @@ body,
 
   /*Intentions*/
 }
+h1{
+  font-size: var(--h1);
+  text-align: center;
+}
+#description{
+  font-size: var(--h4);
+  text-align: center;
+}
 nav{
   font-size: var(--h2);
   text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#router{
+  margin: 1rem;
+}
+.chart{
+  width: 75%;
+  margin: auto;
 }
 </style>

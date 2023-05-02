@@ -20,7 +20,7 @@ export default {
     data:{
       labels:["Coney Island" , "Brooklyn" , "Bronx"],
       datasets:[{ data: [],
-      label:"Nice" ,
+      label:"AQI" ,
       backgroundColor: [
       'rgba(255, 99, 132, 0.2)',
       'rgba(255, 159, 64, 0.2)',

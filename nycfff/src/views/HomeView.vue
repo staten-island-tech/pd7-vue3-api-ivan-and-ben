@@ -1,11 +1,12 @@
 <template>
-  <h1 class="title"> Air Qulaity In NYC</h1>
-  <button class="button" @click="newchart">Other Parts of NYC</button>
+  <div class="buttons">
+    <button id="button" @click="newchart">Switch Parts of NYC</button>
+  </div>
   <div v-if="load" >
-    <BarChart />
+    <BarChart class="chart" />
   </div>
   <div v-if="load2">
-    <BarChart2 />
+    <BarChart2 class="chart" />
   </div>
 
 </template>
@@ -40,13 +41,29 @@ export default {
 </script>
 
 <style scoped>
-.button {
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+#button{
+  text-decoration: none;
+  padding: 2rem 3rem;
+  display: block;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  transition: all 0.2s;
   text-align: center;
-  font-size: large;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+#button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
 }
 
-.title{
-  font-size: x-large;
-  text-align: center;
-}
 </style> 

@@ -46,9 +46,9 @@
   );
   let data2 = await res2.json();
   let arr = Object.values(data2);
-  let boys = arr.filter((name) => name.gndr === "MALE");
-  console.log(boys);
-  let top5 = boys.sort((a,b) => b.cnt-a.cnt).slice(0,5);
+  let girls = arr.filter((name) => name.gndr === "FEMALE");
+  console.log(girls);
+  let top5 = girls.sort((a,b) => b.cnt-a.cnt).slice(0,5);
   top5.forEach(name => {
         this.data.labels.push(name.nm)
         this.data.datasets[0].data.push(name.cnt)
