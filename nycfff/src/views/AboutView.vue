@@ -1,20 +1,10 @@
 <template>
-  <PieChart />
+  <BoyDoughnutChart/>
 </template>
 
 <script setup>
 import {ref, onMounted} from 'vue'
-import card from '../components/card.vue';
-import PieChart from '../components/icons/PieChart.vue';
-const babyNames = ref("")
-async function getBabies(){
-  let res = await fetch('https://data.cityofnewyork.us/resource/25th-nujf.json')
-  let data = await res.json()
-  babyNames.value = data
-}
-onMounted(()=>{
- getBabies()
-})
+import BoyDoughnutChart from '../components/BoyDoughnutChart.vue';
 </script>
 
 <style>
